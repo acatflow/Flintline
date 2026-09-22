@@ -1,10 +1,6 @@
 # 📺 FlintLine 火石線路 
-<p align="left">
-  <a href="https://github.com"><img src="https://shields.io" alt="GitHub Stars"></a>
-  <a href="https://github.com/blob/master/LICENSE"><img src="https://shields.io" alt="License"></a>
-</p>
-
-
+[![GitHub Stars](https://shields.io)](https://github.com/acatflow/Flintline)
+[![License](https://shields.io)](https://github.com)
 
 專為**海外長輩華人**打造的電視盒子（TVbox）專用開源助手。基於 **Clash 強大分流內核**進行二次開發，整合客製化極簡電視 UI 與免裝 APP 的手機網頁遠端助理。純公益、完全免費無廣告。
 
