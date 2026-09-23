@@ -2,7 +2,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Android%206.0%2B-3DDC84?logo=android&logoColor=white)](https://www.android.com)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-專為**海外長輩華人**打造的電視盒子（TVbox）專用海外加速器與免裝 APP 的手機網頁遠端助理。純公益、完全免費無廣告。
+
+專為**無法正常使用安博盒子的地區**打造的開源後台功能型外掛與免裝 APP 的手機網頁遠端助理。純公益、完全免費無廣告。
 
 🌐 **Notion 詳細圖文教學官網（電視內建瀏覽器直刷短網址）：** [51999.uk](https://51999.uk)
 👉 [📖 點此前往詳細圖文教學（Notion 外部連結）](https://51999.uk)
