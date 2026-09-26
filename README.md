@@ -1,4 +1,4 @@
-# 📺 FlintLine 火石線路 
+🌟 FlintLine 火石網路助手 (FlintLine Network Assistant)
 [![Platform](https://img.shields.io/badge/Platform-Android%206.0%2B-3DDC84?logo=android&logoColor=white)](https://www.android.com)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
