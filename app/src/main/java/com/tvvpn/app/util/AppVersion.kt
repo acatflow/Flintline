@@ -1,4 +1,4 @@
-package com.flintline.app.util
+package com.tvvpn.app.util
 
 import android.content.Context
 import android.os.Build
@@ -9,9 +9,9 @@ import android.os.Build
 
 fun installedVersionName(context: Context): String = try {
     context.packageManager.getPackageInfo(context.packageName, 0).versionName
-        ?: com.flintline.app.BuildConfig.VERSION_NAME
+        ?: com.tvvpn.app.BuildConfig.VERSION_NAME
 } catch (_: Exception) {
-    com.flintline.app.BuildConfig.VERSION_NAME
+    com.tvvpn.app.BuildConfig.VERSION_NAME
 }
 
 fun installedVersionLabel(context: Context): String = try {
@@ -20,5 +20,5 @@ fun installedVersionLabel(context: Context): String = try {
     val code = if (Build.VERSION.SDK_INT >= 28) pi.longVersionCode else pi.versionCode.toLong()
     "版本 ${pi.versionName} ($code)"
 } catch (_: Exception) {
-    "版本 ${com.flintline.app.BuildConfig.VERSION_NAME} (${com.flintline.app.BuildConfig.VERSION_CODE})"
+    "版本 ${com.tvvpn.app.BuildConfig.VERSION_NAME} (${com.tvvpn.app.BuildConfig.VERSION_CODE})"
 }

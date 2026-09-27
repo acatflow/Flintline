@@ -1,4 +1,4 @@
-package com.flintline.app.net
+package com.tvvpn.app.net
 
 import android.content.Context
 import android.util.Log

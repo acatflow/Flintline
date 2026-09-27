@@ -1,4 +1,4 @@
-package com.flintline.app.service
+package com.tvvpn.app.service
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -15,9 +15,9 @@ import android.os.Messenger
 import android.os.ParcelFileDescriptor
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import com.flintline.app.R
-import com.flintline.app.config.AppConfig
-import com.flintline.app.ui.MainActivity
+import com.tvvpn.app.R
+import com.tvvpn.app.config.AppConfig
+import com.tvvpn.app.ui.MainActivity
 import com.github.kr328.clash.core.Clash
 import com.github.kr328.clash.core.model.ProxySort
 import kotlinx.coroutines.CoroutineScope
@@ -523,7 +523,7 @@ class FlintVpnService : VpnService() {
     companion object {
         private const val TAG = "FlintVpnService"
         /** GUI 发起 startService 时带的 action,用来和 always-on/开机的系统启动区分开。 */
-        const val ACTION_GUI_ATTACH = "com.flintline.app.action.GUI_ATTACH"
+        const val ACTION_GUI_ATTACH = "com.tvvpn.app.action.GUI_ATTACH"
         private const val CHANNEL_ID = "flint_vpn"
         private const val NOTIF_ID = 1
         private const val FETCH_TIMEOUT_MS = 20_000L

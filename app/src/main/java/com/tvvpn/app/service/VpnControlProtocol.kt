@@ -1,4 +1,4 @@
-package com.flintline.app.service
+package com.tvvpn.app.service
 
 /**
  * MainActivity（主进程）跟 FlintVpnService（`:vpn` 独立进程）之间的 IPC 协议——

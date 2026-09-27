@@ -1,4 +1,4 @@
-package com.flintline.app.service
+package com.tvvpn.app.service
 
 import android.content.Context
 

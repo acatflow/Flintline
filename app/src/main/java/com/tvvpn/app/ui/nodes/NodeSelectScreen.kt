@@ -1,4 +1,4 @@
-package com.flintline.app.ui.nodes
+package com.tvvpn.app.ui.nodes
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -27,13 +27,13 @@ import androidx.compose.ui.platform.LocalInputModeManager
 import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.flintline.app.service.VpnClient
-import com.flintline.app.ui.theme.FlintAmber
-import com.flintline.app.ui.theme.FlintFocusSurface
-import com.flintline.app.ui.theme.tvFocusHighlight
-import com.flintline.app.ui.theme.FlintSurfaceRaised
-import com.flintline.app.ui.theme.FlintTextMuted
-import com.flintline.app.ui.theme.FlintTextSecondary
+import com.tvvpn.app.service.VpnClient
+import com.tvvpn.app.ui.theme.FlintAmber
+import com.tvvpn.app.ui.theme.FlintFocusSurface
+import com.tvvpn.app.ui.theme.tvFocusHighlight
+import com.tvvpn.app.ui.theme.FlintSurfaceRaised
+import com.tvvpn.app.ui.theme.FlintTextMuted
+import com.tvvpn.app.ui.theme.FlintTextSecondary
 
 // 选节点页——三个核心动作之一。节点列表来自 :vpn 进程里 mihomo 核心已加载配置的
 // 第一个 select 类型分组（FlintVpnService.selectorGroupName()）。**已知限制**：

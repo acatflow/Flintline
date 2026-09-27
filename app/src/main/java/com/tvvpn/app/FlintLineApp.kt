@@ -1,4 +1,4 @@
-package com.flintline.app
+package com.tvvpn.app
 
 import android.app.AlarmManager
 import android.app.Application
@@ -7,7 +7,7 @@ import android.content.Intent
 import android.os.Build
 import android.system.Os
 import android.util.Log
-import com.flintline.app.net.TlsCompat
+import com.tvvpn.app.net.TlsCompat
 import com.github.kr328.clash.common.Global
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

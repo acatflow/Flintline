@@ -1,4 +1,4 @@
-package com.flintline.app.ui.theme
+package com.tvvpn.app.ui.theme
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode

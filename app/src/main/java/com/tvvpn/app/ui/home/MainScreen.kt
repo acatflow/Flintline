@@ -1,4 +1,4 @@
-package com.flintline.app.ui.home
+package com.tvvpn.app.ui.home
 
 import android.net.VpnService
 import android.util.Log
@@ -34,16 +34,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.flintline.app.config.AppConfig
-import com.flintline.app.service.SubscriptionProvider
-import com.flintline.app.service.VpnClient
+import com.tvvpn.app.config.AppConfig
+import com.tvvpn.app.service.SubscriptionProvider
+import com.tvvpn.app.service.VpnClient
 import kotlinx.coroutines.launch
-import com.flintline.app.ui.theme.FlintAmber
-import com.flintline.app.ui.theme.FlintAmberBright
-import com.flintline.app.ui.theme.FlintTextMuted
-import com.flintline.app.ui.theme.FlintTextSecondary
-import com.flintline.app.ui.theme.RequestInitialTvFocus
-import com.flintline.app.ui.theme.tvFocusHighlight
+import com.tvvpn.app.ui.theme.FlintAmber
+import com.tvvpn.app.ui.theme.FlintAmberBright
+import com.tvvpn.app.ui.theme.FlintTextMuted
+import com.tvvpn.app.ui.theme.FlintTextSecondary
+import com.tvvpn.app.ui.theme.RequestInitialTvFocus
+import com.tvvpn.app.ui.theme.tvFocusHighlight
 
 private const val CONNECT_WATCHDOG_MS = 45_000L
 private const val TOGGLE_DEBOUNCE_MS = 2_000L
@@ -161,7 +161,7 @@ fun MainScreen(
             Row(verticalAlignment = Alignment.Bottom) {
                 Text(AppConfig.brandDisplay, fontSize = 18.sp, color = FlintTextSecondary)
                 Spacer(Modifier.width(8.dp))
-                Text("v${com.flintline.app.util.installedVersionName(context)}", fontSize = 12.sp, color = FlintTextMuted)
+                Text("v${com.tvvpn.app.util.installedVersionName(context)}", fontSize = 12.sp, color = FlintTextMuted)
             }
             Text(
                 "設定",

@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.flintline.app"
+    namespace = "com.tvvpn.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.flintline.app"
+        applicationId = "com.tvvpn.app"
         // 支持到 Android 6.0（mihomo 核心实测可到 API 21；前台服务通知渠道在 API 26 有版本判断）。
         minSdk = 23
         targetSdk = 34

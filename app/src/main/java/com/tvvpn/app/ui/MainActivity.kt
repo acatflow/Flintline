@@ -1,4 +1,4 @@
-package com.flintline.app.ui
+package com.tvvpn.app.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.flintline.app.ui.home.MainScreen
-import com.flintline.app.ui.nodes.NodeSelectScreen
-import com.flintline.app.ui.settings.SettingsScreen
-import com.flintline.app.ui.theme.FlintLineTheme
+import com.tvvpn.app.ui.home.MainScreen
+import com.tvvpn.app.ui.nodes.NodeSelectScreen
+import com.tvvpn.app.ui.settings.SettingsScreen
+import com.tvvpn.app.ui.theme.FlintLineTheme
 
 private const val ROUTE_HOME = "home"
 private const val ROUTE_SETTINGS = "settings"

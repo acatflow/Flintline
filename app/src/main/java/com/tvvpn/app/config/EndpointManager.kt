@@ -1,4 +1,4 @@
-package com.flintline.app.config
+package com.tvvpn.app.config
 
 import android.util.Log
 import java.io.IOException

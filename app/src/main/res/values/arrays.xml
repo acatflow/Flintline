@@ -4,7 +4,7 @@
          （见 DEVLOG"第 5 步"那条记录）：用整段 0.0.0.0/0 直接把测试设备自己的 WiFi/ADB
          调试连接也吞了进去，mihomo 核心还没来得及接手就已经把所有流量导入了一个没人
          处理的 TUN 黑洞，设备直接断网。这份列表不是"可选功能"，是必须默认打开的安全
-         措施——FlintLine 不像 milkdns 那样把它做成用户可关的开关（需求里没有这种高级
+         措施——本项目不把它做成用户可关的开关（需求里没有这种高级
          设置项），固定生效，不暴露开关。 -->
     <string-array name="bypass_private_route" translatable="false">
         <item>1.0.0.0/8</item>

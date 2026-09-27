@@ -1,4 +1,4 @@
-package com.flintline.app.ui.settings
+package com.tvvpn.app.ui.settings
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
@@ -18,9 +18,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.flintline.app.service.SubscriptionProvider
-import com.flintline.app.ui.theme.FlintTextMuted
-import com.flintline.app.ui.theme.FlintTextSecondary
+import com.tvvpn.app.service.SubscriptionProvider
+import com.tvvpn.app.ui.theme.FlintTextMuted
+import com.tvvpn.app.ui.theme.FlintTextSecondary
 
 /**
  * 設定：填写 Clash/mihomo 订阅链接。开源版没有任何自动注册——用户把自己的订阅地址

@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">FlintLine</string>
-    <string name="vpn_notification_channel">FlintLine 連接狀態</string>
-    <string name="vpn_notification_title">FlintLine 已連接</string>
-    <string name="heartbeat_notification_channel">FlintLine 背景服務</string>
-    <string name="heartbeat_notification_title">FlintLine 正在運行</string>
+    <string name="app_name">TV VPN</string>
+    <string name="vpn_notification_channel">TV VPN 連接狀態</string>
+    <string name="vpn_notification_title">TV VPN 已連接</string>
+    <string name="heartbeat_notification_channel">TV VPN 背景服務</string>
+    <string name="heartbeat_notification_title">TV VPN 正在運行</string>
 </resources>
