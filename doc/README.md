@@ -17,7 +17,7 @@
 
 ### 1) 自备 mihomo 核心 `.so`（不随仓库分发）
 
-见 [`app/src/main/jniLibs/README.md`](app/src/main/jniLibs/README.md)。把 `libclash.so` +
+见 [`../app/src/main/jniLibs/README.md`](../app/src/main/jniLibs/README.md)。把 `libclash.so` +
 `libbridge.so`（来自开源 [ClashMetaForAndroid / mihomo](https://github.com/MetaCubeX/ClashMetaForAndroid)）
 放进 `arm64-v8a/` 和 `armeabi-v7a/`。
 
