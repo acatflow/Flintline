@@ -1,0 +1,46 @@
+# Fallback config, used before a real subscription is fetched (PaypayClient.register
+# has not returned a subscription URL yet). Pure direct mode: proxies nothing, only
+# brings the mihomo core + TUN up so the engine is verified. Once a real subscription
+# is available it is downloaded and this file is only used when that download fails.
+#
+# WARNING: every name here MUST stay ASCII. Multibyte names (CJK / emoji) in group or
+# node names trigger a Go runtime crash ("fatal error: invalid pointer found on stack")
+# in the 32-bit armeabi-v7a libclash.so built with go1.26.5 - this fallback is loaded on
+# first launch before the subscription arrives, so a multibyte name here crashes the app
+# ("stopped") on the very first "start". See docs/HANDOFF_2026-09-21_*.md.
+mixed-port: 7890
+mode: rule
+log-level: info
+ipv6: false
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 223.5.5.5
+  nameserver:
+    - 223.5.5.5
+
+# Placeholder proxies only satisfy mihomo's "proxies must be non-empty" validation.
+# Both point at a local port nobody listens on, so they are never really dialed
+# (the only rule that could select them matches a domain that never exists).
+proxies:
+  - name: "test-a"
+    type: socks5
+    server: 127.0.0.1
+    port: 1
+  - name: "test-b"
+    type: socks5
+    server: 127.0.0.1
+    port: 1
+proxy-groups:
+  - name: "SELECT"
+    type: select
+    proxies:
+      - "test-a"
+      - "test-b"
+rules:
+  # Only this non-existent domain would hit SELECT (i.e. never); everything real
+  # goes MATCH,DIRECT so no real traffic passes through the unreachable placeholders.
+  - DOMAIN,flintline-fallback-placeholder-never-matches.invalid,SELECT
+  - MATCH,DIRECT

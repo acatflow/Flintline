@@ -1,0 +1,18 @@
+# Android / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+app/build/
+
+# 自备的原生核心（不入库）
+*.so
+
+# 签名凭据
+*.jks
+*.keystore

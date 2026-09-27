@@ -1,0 +1,8 @@
+<resources>
+    <!-- 纯 Compose 界面，这个 XML 主题只给系统启动窗口用（manifest 的 android:theme），
+         实际配色在 FlintLineTheme.kt 里定义，跟 logo 同一套琥珀色/深色。 -->
+    <style name="Theme.FlintLine" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/flint_background</item>
+        <item name="android:statusBarColor">@color/flint_background</item>
+    </style>
+</resources>

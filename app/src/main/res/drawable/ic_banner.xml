@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- TV App 列表用的横幅，占位版——只有 logo 标记，没有文字（VectorDrawable
+         画文字麻烦，先用标记撑住能显示，之后有真实美术再换成正式横幅图）。 -->
+    <path android:pathData="M0,0 L320,0 L320,180 L0,180 Z" android:fillColor="#0B0A09" />
+    <group android:translateX="70" android:translateY="30" android:scaleX="0.6" android:scaleY="0.6">
+        <path android:pathData="M100,0 A100,100 0 1,1 99.99,0 Z" android:fillColor="#17140F" />
+        <path android:pathData="M100,100 L58,56" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+        <path android:pathData="M100,100 L146,60" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+        <path android:pathData="M100,100 L150,140" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+        <path android:pathData="M100,100 L54,148" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+        <path android:pathData="M58,56 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+        <path android:pathData="M146,60 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+        <path android:pathData="M150,140 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+        <path android:pathData="M54,148 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+        <path android:pathData="M100,100 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" android:fillColor="#F59E0B" android:fillAlpha="0.55" />
+        <path android:pathData="M100,100 m-12,0 a12,12 0 1,1 24,0 a12,12 0 1,1 -24,0" android:fillColor="#FFF7ED" />
+    </group>
+</vector>

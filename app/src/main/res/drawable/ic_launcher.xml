@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Ember Node（logo 方向 C）——发光节点 + 4 条细线连 4 个卫星点，深色底。
+         精确版是 Artifact 里那份 SVG，这里是给 Android 启动器用的简化矢量版。 -->
+    <path android:pathData="M100,0 A100,100 0 1,1 99.99,0 Z" android:fillColor="#0F0E11" />
+    <path android:pathData="M100,100 L58,56" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+    <path android:pathData="M100,100 L146,60" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+    <path android:pathData="M100,100 L150,140" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+    <path android:pathData="M100,100 L54,148" android:strokeColor="#726B5C" android:strokeWidth="3" android:strokeAlpha="0.85" />
+    <path android:pathData="M58,56 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+    <path android:pathData="M146,60 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+    <path android:pathData="M150,140 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+    <path android:pathData="M54,148 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" android:fillColor="#CBC2B2" />
+    <path android:pathData="M100,100 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" android:fillColor="#F59E0B" android:fillAlpha="0.55" />
+    <path android:pathData="M100,100 m-12,0 a12,12 0 1,1 24,0 a12,12 0 1,1 -24,0" android:fillColor="#FFF7ED" />
+</vector>
