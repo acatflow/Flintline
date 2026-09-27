@@ -11,12 +11,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.tvvpn.app.ui.home.MainScreen
 import com.tvvpn.app.ui.nodes.NodeSelectScreen
+import com.tvvpn.app.ui.remote.RemoteDesktopScreen
 import com.tvvpn.app.ui.settings.SettingsScreen
 import com.tvvpn.app.ui.theme.FlintLineTheme
 
 private const val ROUTE_HOME = "home"
 private const val ROUTE_SETTINGS = "settings"
 private const val ROUTE_NODE_SELECT = "node_select"
+private const val ROUTE_REMOTE = "remote_desktop"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,13 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(ROUTE_SETTINGS) {
-                            SettingsScreen(onBack = { navController.popBackStack() })
+                            SettingsScreen(
+                                onBack = { navController.popBackStack() },
+                                onOpenRemote = { navController.navigate(ROUTE_REMOTE) },
+                            )
+                        }
+                        composable(ROUTE_REMOTE) {
+                            RemoteDesktopScreen(onBack = { navController.popBackStack() })
                         }
                         composable(ROUTE_NODE_SELECT) {
                             NodeSelectScreen()

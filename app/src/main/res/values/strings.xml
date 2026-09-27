@@ -4,4 +4,5 @@
     <string name="vpn_notification_title">TV VPN 已連接</string>
     <string name="heartbeat_notification_channel">TV VPN 背景服務</string>
     <string name="heartbeat_notification_title">TV VPN 正在運行</string>
+    <string name="remote_a11y_desc">用于远程桌面：把远端发来的点按/滑动/文本注入到本机屏幕。仅在你开启远程桌面时使用，不采集界面内容。</string>
 </resources>

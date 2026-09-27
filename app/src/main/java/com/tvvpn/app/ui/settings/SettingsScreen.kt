@@ -27,7 +27,7 @@ import com.tvvpn.app.ui.theme.FlintTextSecondary
  * （指向一份 clash 配置 yaml 的 http(s) 链接）填在这里，保存后回首页即可连接。
  */
 @Composable
-fun SettingsScreen(onBack: () -> Unit = {}) {
+fun SettingsScreen(onBack: () -> Unit = {}, onOpenRemote: () -> Unit = {}) {
     val context = LocalContext.current
     var url by remember {
         mutableStateOf(SubscriptionProvider.getSubscriptionUrl(context) ?: "")
@@ -63,6 +63,8 @@ fun SettingsScreen(onBack: () -> Unit = {}) {
             }) { Text("儲存") }
             Button(onClick = onBack) { Text("返回") }
         }
+        Spacer(Modifier.height(20.dp))
+        Button(onClick = onOpenRemote) { Text("遠程桌面（局域網看屏/操控）") }
         Spacer(Modifier.height(24.dp))
         Text(
             "提示：本 App 不連任何私有後端、不做設備註冊或遙測；訂閱內容由 mihomo 核心直接下載校驗。",

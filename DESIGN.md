@@ -26,7 +26,17 @@ APP 壳 + 标准 VpnService + mihomo 核心 + 用户自配订阅。零私有后�
 - **绝不断网**:订阅为空/下载失败 → 回落 `fallback_direct.yaml`(不代理,只保证 TUN 起得来)。
 - **无 root**:标准 `VpnService.prepare()` 系统授权一次即可;移除了 root 强制 always-on/lockdown。
 
-## Phase 2(未做,可干净重建)
+## Phase 2
 
-- **远程桌面**:原基于 RootShell + 本机 adbd + 远程输入,涉及 root,建议干净重建为可选模块。
+### 远程桌面(已实现,rootless 干净重建)
+
+不再基于原来的 RootShell + 本机 adbd,而是 rootless 方案:
+- **看屏**:MediaProjection + VirtualDisplay + ImageReader → JPEG,裸 Socket HTTP 以 MJPEG 推流(`RemoteDesktopService` / `RemoteHttpServer`)。
+- **操控**:AccessibilityService `dispatchGesture`(API24+)+ 全局动作 + 文本注入(`RemoteInputAccessibilityService`)。
+- **同意与安全**:MediaProjection 需系统弹窗授权、无障碍需手动开启、默认关闭、**强制 PIN 令牌**、仅局域网、无后端、不开机自启。
+- **兼容**:API21+ 看屏;API24+ 才能注入手势(dispatchGesture 限制),UI/README 已说明。
+- **坐标**:客户端传归一化坐标,服务端乘真实屏幕像素,与抓屏缩放解耦。
+
+### 其余未做
+
 - **OTA**:改为用户自配的更新源,不依赖私有 agent 推送。
