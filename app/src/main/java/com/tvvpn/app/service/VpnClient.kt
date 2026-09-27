@@ -90,7 +90,7 @@ class VpnClient(context: Context) {
             // 触发的这一刻，serviceMessenger 刚刚赋值完成，此时查询保证能发出去。
             send(VpnControlProtocol.MSG_QUERY_STATE)
             send(VpnControlProtocol.MSG_QUERY_NODES)
-            // paypay 注册可能比 bind 更早完成，那时 prepare() 发不出去——补发
+            // 订阅端 注册可能比 bind 更早完成，那时 prepare() 发不出去——补发
             pendingPrepareUrl?.let { prepare(it) }
             // :vpn 崩溃重启后回到这里 → 自动重发连接(相当于用户手动的"第二次")
             if (needReconnect) {

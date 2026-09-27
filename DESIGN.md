@@ -15,7 +15,7 @@ APP 壳 + 标准 VpnService + mihomo 核心 + 用户自配订阅。零私有后�
 | 处置 | 内容 |
 |---|---|
 | **原样保留** | `com.github.kr328.clash.*`(Clash 内核桥,开源血统)、`EndpointManager`、`VpnClient`、`VpnPrefs`、`VpnControlProtocol`、`NodeSelectScreen`、`theme/*`(含 TV 焦点)、`util/AppVersion`、`TlsCompat`(安卓7 CA 兼容)、`assets/ca-bundle.pem`、`assets/fallback_direct.yaml` |
-| **改写** | `AppConfig`(清空所有私有端点/域名/中国区绕过,只留 TUN 参数等本地默认值)、`FlintVpnService`(移除 CnBlock 绕过与 PaypayClient,订阅改从 `SubscriptionProvider` 取)、`MainScreen`(移除注册/配额/always-on/远程协助,改为订阅设置 + 连接)、`MainActivity`(移除心跳启动,路由改 home/settings/node)、`FlintLineApp`(移除 root 与远程配置拉取,保留崩溃自愈 + CA + TLS) |
+| **改写** | `AppConfig`(清空所有私有端点/域名/地区检测,只留 TUN 参数等本地默认值)、`FlintVpnService`(移除 CnBlock 绕过与 PaypayClient,订阅改从 `SubscriptionProvider` 取)、`MainScreen`(移除注册/配额/always-on/远程协助,改为订阅设置 + 连接)、`MainActivity`(移除心跳启动,路由改 home/settings/node)、`FlintLineApp`(移除 root 与远程配置拉取,保留崩溃自愈 + CA + TLS) |
 | **新增** | `SubscriptionProvider`(用户订阅 URL 持久化;下载校验交给 mihomo 核心)、`SettingsScreen`(填订阅 URL) |
 | **丢弃** | NativeDomainResolver、PaypayClient、FlintHeartbeat{Client,Service}、DeviceFingerprint、FlintIdentity、AlwaysOnController、CnBlockBypass、RootShell、AdbTunnelClient/RemoteAccess/RemoteInput、AdbEnsurer/LocalAdbClient/DebugProps、OtaManager、Watchdog、Boot/PackageReplacedReceiver、DeviceInfoScreen、RemoteHelpScreen、`jni-bridge/`(domain-tools 桥源码)、`libdr/libbridge?`... 仅保留 mihomo 的 libclash/libbridge |
 

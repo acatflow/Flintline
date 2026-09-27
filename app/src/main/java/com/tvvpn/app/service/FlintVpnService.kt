@@ -172,7 +172,7 @@ class FlintVpnService : VpnService() {
 
     // ---- 预热（MSG_PREPARE）：把"按下连接后要等很久"的两大头提前做掉 ----
     // M6（armv7）真机测过：从按下到"已連接"最长 12 秒，大头是 libclash.so 首次加载 +
-    // nativeInit（几秒）和订阅下载（1~2 秒，国内网络波动时更久）。App 一启动、paypay
+    // nativeInit（几秒）和订阅下载（1~2 秒，国内网络波动时更久）。App 一启动、订阅端
     // 注册拿到订阅链接后就预热，真正按连接时只剩 Clash.load + establish + startTun。
     private val prepareMutex = kotlinx.coroutines.sync.Mutex()
     @Volatile private var coreWarmed = false
@@ -223,7 +223,7 @@ class FlintVpnService : VpnService() {
      *   1. 用 mihomo 核心自带的 fetchAndValid 把 [subscriptionUrl] 下载到
      *      configDir/config.yaml 并校验（下载 + 解析 + 校验都在 native 侧，跟
      *      上游项目 的 ProfileProcessor 走的同一个入口）——成功就是真实节点配置。
-     *   2. 下载失败（断网 / paypay 挂了）但目录里还有上次下载成功的 config.yaml
+     *   2. 下载失败（断网 / 订阅端 挂了）但目录里还有上次下载成功的 config.yaml
      *      → 沿用它，标记来源仍然是 SUBSCRIPTION（是真节点，只是可能旧）。
      *   3. 什么都没有 → 从 assets 复制直连兜底配置，来源 FALLBACK——这份配置不代理
      *      任何流量，只保证 TUN 能起来、App 不崩。
@@ -271,7 +271,7 @@ class FlintVpnService : VpnService() {
                 dlDir.deleteRecursively()
             }
         } else {
-            Log.w(TAG, "没有订阅链接（paypay 注册还没成功？），无法下载真实配置")
+            Log.w(TAG, "没有订阅链接（订阅端 注册还没成功？），无法下载真实配置")
         }
 
         // tier-2:上次下载成功的好缓存。必须【重新校验有真实节点】——历史上可能被旧版本
