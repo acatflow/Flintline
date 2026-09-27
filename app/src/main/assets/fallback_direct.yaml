@@ -7,7 +7,7 @@
 # node names trigger a Go runtime crash ("fatal error: invalid pointer found on stack")
 # in the 32-bit armeabi-v7a libclash.so built with go1.26.5 - this fallback is loaded on
 # first launch before the subscription arrives, so a multibyte name here crashes the app
-# ("stopped") on the very first "start". See docs/HANDOFF_2026-09-21_*.md.
+# ("stopped") on the very first "start". See the project notes.
 mixed-port: 7890
 mode: rule
 log-level: info

@@ -361,7 +361,7 @@ class FlintVpnService : VpnService() {
     /**
      * @return 是否成功建立起 TUN + 加载核心配置。
      *
-     * 执行顺序是第 5 步真机事故（见 DEVLOG）之后特意调整过的，硬性要求：
+     * 执行顺序是第 5 步真机事故（见 开发记录）之后特意调整过的，硬性要求：
      * 所有"可能失败、且不需要 TUN fd"的步骤（加载/校验配置，会触发 Bridge 的
      * native 库首次初始化）必须排在 `establish()` **之前**——`establish()`
      * 一旦成功，Android 立刻在系统层面把流量路由进这个 fd，这一步和

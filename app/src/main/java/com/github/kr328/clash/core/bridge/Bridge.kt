@@ -14,7 +14,7 @@ import java.io.File
  * `nm -D libbridge.so` 实测过，JNI 导出符号是
  * `Java_com_github_kr328_clash_core_bridge_Bridge_nativeXxx` 这样硬编码在预编译
  * `.so` 里的，改了包名/类名/方法名就是运行时 UnsatisfiedLinkError（编译期不报错）。
- * FlintLine 决定"vendor 预编译 .so，不重建整套 Go+CMake 工具链"（见 DEVLOG 开头那条
+ * FlintLine 决定"vendor 预编译 .so，不重建整套 Go+CMake 工具链"（见 开发记录 开头那条
  * 记录），代价就是这一层的包名被这几个 .so 焊死，只能原样照抄，不能套进
  * com.tvvpn.app 命名空间——这不影响 App 本身的 applicationId/namespace，
  * 只是这几个源文件的 package 声明。

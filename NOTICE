@@ -1,0 +1,11 @@
+This project reuses and derives from open-source software:
+
+- ClashForAndroid (github.com/Kr328/ClashForAndroid) — GPL-3.0
+- ClashMetaForAndroid / mihomo core (github.com/MetaCubeX) — GPL-3.0
+
+The Kotlin sources under `app/src/main/java/com/github/kr328/clash/` are
+adapted from ClashForAndroid and remain under GPL-3.0. This project as a
+whole is therefore distributed under GPL-3.0; see LICENSE.
+
+The mihomo native core (libclash.so / libbridge.so) is NOT bundled — users
+must supply their own build (see app/src/main/jniLibs/README.md).
