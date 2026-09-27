@@ -39,7 +39,7 @@ import com.flintline.app.ui.theme.FlintTextSecondary
 // 第一个 select 类型分组（FlintVpnService.selectorGroupName()）。**已知限制**：
 // 只有连接过一次之后才能看到真实列表（配置目前只在 connectVpn() 时才会真正
 // Clash.load()，见 FlintVpnService.replyNodes() 注释）；没连接过 / 没有可选节点组
-// 时显示空态文案，不是 bug。真实订阅接入（domain-tools 域名就绪）之前，看到的
+// 时显示空态文案，不是 bug。用户在「設定」填入订阅并连接成功之前，看到的
 // 都是 fallback_direct.yaml 里的占位节点，选谁都不影响实际流量（mode: direct）。
 @Composable
 fun NodeSelectScreen() {

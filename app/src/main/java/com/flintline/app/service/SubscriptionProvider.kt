@@ -5,8 +5,7 @@ import android.content.Context
 /**
  * 订阅来源（开源版）。
  *
- * 商业版这里是 PaypayClient：自动向私有后端匿名注册、领取订阅链接、查流量配额。
- * 开源版不做任何自动注册/遥测——**订阅地址由用户在「設定」里自己填**（Clash/mihomo 订阅
+ * 本项目不做任何自动注册/遥测——**订阅地址由用户在「設定」里自己填**（Clash/mihomo 订阅
  * 的 http(s) 链接，指向一份 clash 配置 yaml）。本类只负责把这个地址持久化、读回。
  *
  * 真正的下载与校验由 mihomo 核心完成（见 FlintVpnService.prepareProfile → Clash.fetchAndValid），

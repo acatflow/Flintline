@@ -1,5 +1,5 @@
-# Fallback config, used before a real subscription is fetched (PaypayClient.register
-# has not returned a subscription URL yet). Pure direct mode: proxies nothing, only
+# Fallback config, used before the user's subscription has been fetched (no
+# subscription URL configured yet). Pure direct mode: proxies nothing, only
 # brings the mihomo core + TUN up so the engine is verified. Once a real subscription
 # is available it is downloaded and this file is only used when that download fails.
 #
