@@ -1,6 +1,6 @@
 package com.github.kr328.clash.common.log
 
-// 从 milkdns 的 :common 模块原样搬过来，只是为了让 Bridge.kt 能不改一个字符地复用。
+// 从 上游项目 的 :common 模块原样搬过来，只是为了让 Bridge.kt 能不改一个字符地复用。
 object Log {
     private const val TAG = "ClashCoreForFlintLine"
 

@@ -6,9 +6,9 @@ import java.net.URI
 
 private fun failureThreshold(): Int = AppConfig.failureThreshold
 
-// 从 milkdns 原样搬过来（com.github.kr328.clash.config.EndpointManager），只改了包名，
+// 从 上游项目 原样搬过来（com.github.kr328.clash.config.EndpointManager），只改了包名，
 // failover 逻辑一字未动——这段是纯业务无关的域名切换策略，跟 Nelo/FlintLine 是哪个品牌
-// 无关，milkdns 那边验证过的行为（网络级失败才切换、业务错误不切换、同一 session 内
+// 无关，上游项目 那边验证过的行为（网络级失败才切换、业务错误不切换、同一 session 内
 // 切换后不自动切回）原样复用。
 interface LastSuccessfulEndpointStore {
     fun get(): String?
@@ -16,7 +16,7 @@ interface LastSuccessfulEndpointStore {
 }
 
 /**
- * 进程内内存实现，不做任何跨进程/跨 APP 重启的持久化——原因见 milkdns 里同一个类的
+ * 进程内内存实现，不做任何跨进程/跨 APP 重启的持久化——原因见 上游项目 里同一个类的
  * 注释：避免一次 failover 切到 backup 后，以后每次冷启动都"黏"在 backup 上。
  */
 class InMemoryEndpointStore : LastSuccessfulEndpointStore {

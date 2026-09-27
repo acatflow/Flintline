@@ -127,7 +127,7 @@ class FlintVpnService : VpnService() {
         // 只有 running（配置已经真正 Clash.load() 过）才查——没连接过的话根本
         // 没有配置加载进 native 核心，这时候调 queryGroupNames/queryGroup 是未定义
         // 行为，没有把握过，不冒险调用，直接回空列表。这是第 6 步范围内的一个已知
-        // 简化：真实产品应该是"App 一启动就加载配置，不必等用户点连接"（milkdns 的
+        // 简化：真实产品应该是"App 一启动就加载配置，不必等用户点连接"（上游项目 的
         // ConfigurationModule 就是这么做的），FlintLine 目前还没做这一层，节点列表
         // 只有连接之后才能看——留给后面需要时再补。
         if (running) {
@@ -222,7 +222,7 @@ class FlintVpnService : VpnService() {
      * 把要交给 Clash.load() 的配置目录准备好，返回配置来源。优先级：
      *   1. 用 mihomo 核心自带的 fetchAndValid 把 [subscriptionUrl] 下载到
      *      configDir/config.yaml 并校验（下载 + 解析 + 校验都在 native 侧，跟
-     *      milkdns 的 ProfileProcessor 走的同一个入口）——成功就是真实节点配置。
+     *      上游项目 的 ProfileProcessor 走的同一个入口）——成功就是真实节点配置。
      *   2. 下载失败（断网 / paypay 挂了）但目录里还有上次下载成功的 config.yaml
      *      → 沿用它，标记来源仍然是 SUBSCRIPTION（是真节点，只是可能旧）。
      *   3. 什么都没有 → 从 assets 复制直连兜底配置，来源 FALLBACK——这份配置不代理
@@ -382,7 +382,7 @@ class FlintVpnService : VpnService() {
             // 真机实测踩出来的坑：Clash.load(path) 的 path 不是"配置文件本身"，
             // native 侧把它当"配置目录"，会去这个目录下找一个固定文件名
             // config.yaml（真机报错 "open .../flint_fallback.yaml/config.yaml:
-            // not a directory" 证实了这一点——milkdns 那边同理，传的也是
+            // not a directory" 证实了这一点——上游项目 那边同理，传的也是
             // ctx.filesDir.resolve("profiles/xxx") 这种目录,不是 .yaml 文件路径,
             // 之前想当然照着"文件路径"理解了,是错的）。
             val configDir = profileDir()

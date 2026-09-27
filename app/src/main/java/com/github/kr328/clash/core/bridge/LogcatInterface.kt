@@ -2,7 +2,7 @@ package com.github.kr328.clash.core.bridge
 
 import androidx.annotation.Keep
 
-// 原样搬自 milkdns。FlintLine 目前没有调用 Bridge.nativeSubscribeLogcat()（没有
+// 原样搬自 上游项目。FlintLine 目前没有调用 Bridge.nativeSubscribeLogcat()（没有
 // 应用内日志查看器 UI），但这个类**必须存在**——libbridge.so 的 JNI_OnLoad 在库
 // 加载时就会一次性 FindClass 缓存这几个回调接口的 jclass（不是等到真正调用对应
 // native 方法才去找），真机踩过坑：缺了这个类会导致 JNI_OnLoad 里

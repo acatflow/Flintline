@@ -9,7 +9,7 @@ import kotlinx.coroutines.CompletableDeferred
 import java.io.File
 
 /**
- * mihomo 核心（milkdns 编译产物 libclash.so + 配套 JNI 桥接层 libbridge.so）的 JNI
+ * mihomo 核心（上游项目 编译产物 libclash.so + 配套 JNI 桥接层 libbridge.so）的 JNI
  * 声明层——**这个文件的包名 `com.github.kr328.clash.core.bridge` 绝对不能改**，
  * `nm -D libbridge.so` 实测过，JNI 导出符号是
  * `Java_com_github_kr328_clash_core_bridge_Bridge_nativeXxx` 这样硬编码在预编译
@@ -20,9 +20,9 @@ import java.io.File
  * 只是这几个源文件的 package 声明。
  *
  * 只保留 FlintLine 用得到的原生方法（初始化/加载配置/起停 TUN/查节点组/切节点/
- * 查隧道状态/reset）——milkdns 原版 Bridge.kt 还有 override 编辑、age 加密密钥、
+ * 查隧道状态/reset）——上游项目 原版 Bridge.kt 还有 override 编辑、age 加密密钥、
  * rule-provider 更新、日志订阅等接口，FlintLine 需求里没有对应功能（选节点/连接/
- * 断开三个动作而已），不搬来增加没用的 keep 面。真要用到时回 milkdns 源码补。
+ * 断开三个动作而已），不搬来增加没用的 keep 面。真要用到时回 上游项目 源码补。
  */
 @Keep
 object Bridge {
@@ -49,7 +49,7 @@ object Bridge {
 
         val ctx = Global.application
 
-        // milkdns 原版注释：疑似 mihomo 原生侧需要提前拿到 APK 自身的一个只读 fd
+        // 上游项目 原版注释：疑似 mihomo 原生侧需要提前拿到 APK 自身的一个只读 fd
         // （可能跟内嵌资源 mmap 有关）才能正常工作——不完全理解原理，原样保留，
         // 不敢删。
         ParcelFileDescriptor.open(File(ctx.packageCodePath), ParcelFileDescriptor.MODE_READ_ONLY)

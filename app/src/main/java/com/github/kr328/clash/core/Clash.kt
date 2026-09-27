@@ -15,10 +15,10 @@ import java.io.File
 import java.net.InetSocketAddress
 
 /**
- * 裁剪自 milkdns 的 core/Clash.kt——只保留 FlintLine"选节点/连接/断开"三个动作
+ * 裁剪自 上游项目 的 core/Clash.kt——只保留 FlintLine"选节点/连接/断开"三个动作
  * 用得到的方法：起停 TUN、查隧道状态、加载配置、下载校验订阅、查节点组、切节点。
- * milkdns 原版还有 override 编辑、age 加密密钥管理、rule-provider 更新、日志订阅、
- * HTTP 系统代理等接口，FlintLine 需求里没有对应功能，不搬——真要用到时回 milkdns
+ * 上游项目 原版还有 override 编辑、age 加密密钥管理、rule-provider 更新、日志订阅、
+ * HTTP 系统代理等接口，FlintLine 需求里没有对应功能，不搬——真要用到时回 上游项目
  * 源码按需补，不要在没有 UI 用到之前先加进来。
  */
 object Clash {

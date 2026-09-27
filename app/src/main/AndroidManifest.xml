@@ -64,7 +64,7 @@
         <!-- 远程输入：无障碍服务，dispatchGesture 注入点按/滑动（API24+）。用户须在系统设置手动开启。 -->
         <service
             android:name=".service.RemoteInputAccessibilityService"
-            android:exported="false"
+            android:exported="true"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />

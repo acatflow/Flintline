@@ -4,7 +4,7 @@ import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.URL
 
-// 原样搬自 milkdns。
+// 原样搬自 上游项目。
 fun parseInetSocketAddress(address: String): InetSocketAddress {
     val url = URL("https://$address")
 
